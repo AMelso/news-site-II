@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+
 import {
   Navbar,
 } from 'reactstrap';
 
-class AppNav extends Component {
-  render() {
-    const { navItems, handleNavClick } = this.props;
+function AppNav(props) {
+  
+    const { navItems, handleNavClick } = props;
 
     return (
       <Navbar color="light" light expand="md">
@@ -18,21 +18,9 @@ class AppNav extends Component {
         </nav>
       </Navbar>
     )
-  }
+  
 }
 
 export default AppNav;
 
 
-// Functional solution:
-// function AppNav({ navItems, handleNavClick }) {
-//   return (
-//     <nav>
-//       {navItems.map((navItem) =>
-//         <a href="#" onClick={() => handleNavClick(navItem.value)} >
-//           {navItem.label} |
-//         </a>
-//       )}
-//     </nav>
-//   );
-// }
